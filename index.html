@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Game</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <table width="70%" border="3px">
+        <tr>
+            <td colspan="2" align="center">
+                <h1>เกมลูกเต๋าสะสมแต้ม</h1>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">ผู้เล่น 2 คน ผลัดกันสะสมแต้มคนละรอบ ในแต่ละรอบคนที่สะสมแต้มโยนลูกเต๋ากี่ครั้งก็ได้ แต้มที่สะสมได้เท่ากับแต้มที่โยนได้ทุกครั้งรวมกัน แต่ละรอบจะจบเมื่อผู้เล่นขอจบรอบ หรือ เมื่อผู้เล่นโยนได้แต้ม 1 ในกรณีที่โยนได้ 1  แต้มของรอบนั้นจะเป็นศูนย์</td>
+        </tr>
+        <tr><td id="goal" colspan="2" align="center"></td></tr>
+        <tr>
+            <td width="50%">ผู้เล่น 1</td>
+            <td width="50%">ผู้เล่น 2</td>
+        </tr>
+        <tr>
+            <td id="score1"></td>
+            <td id="score2"></td>
+        </tr>
+        <tr>
+            <td>ขณะนี้เป็นรอบของผู้เล่น</td><td id="player"></td>
+        </tr>
+        <tr>
+            <td id="dice"></td><td id="roundScore"></td>
+        </tr>
+    </table>
+
+    <button id="p1roll">โยนเต๋า1</button>
+    <button id="p1endround">จบรอบ1</button>
+    <button id="p2roll">โยนเต๋า2</button>
+    <button id="p2endround">จบรอบ2</button>
+    <button id="newgame">จบเกม</button>
+
+    <div class="winner hidden"><button class="closewinner">&times;</button>
+        <h1>ผู้ชนะคือ... 😍</h1>
+        <p id="winnerresult">
+        </p>
+    </div>
+    <div class="overlay hidden"></div>
+    <script src="script.js"></script>
+</body>
+</html>
